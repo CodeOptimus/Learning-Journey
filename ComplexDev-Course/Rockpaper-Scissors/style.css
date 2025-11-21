@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.heading {
+    margin-bottom: 1rem;
+}
+
+.emoji {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50%;
+    outline: none;
+    padding: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.score {
+    margin-bottom: 1rem;
+}
+
+.reset-btn,
+.auto-play-btn {
+    padding: .6rem 1.5rem;
+    background-color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}

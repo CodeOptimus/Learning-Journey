@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2rem 1rem;
+}
+
+.subscribe-btn-heading {
+    margin-bottom: 1rem;
+}
+
+.subscribe-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: .5rem .8rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.is-subscribed {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+
+/* Amazon */
+.amazon-heading {
+    margin-bottom: 1rem;
+}
+
+.cost-input {
+    padding: .8rem;
+    font-size: 1rem;
+    border: black 1px solid;
+    outline: none;
+}
+
+.calculate-btn {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.total-cost {
+    margin-top: .5rem;
+}
