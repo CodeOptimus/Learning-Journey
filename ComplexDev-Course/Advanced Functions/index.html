@@ -6,18 +6,32 @@
     <title>Advanced Functions</title>
   </head>
   <body>
-    <button onclick="displayAdd()" class="add-btn">Add</button>
+    <!-- <button onclick="displayAdd()" class="add-btn">Add</button>
 
-    <p class="display-add"></p>
+    <p class="display-add"></p> -->
+
+    <button onclick="" class="js-btn">Click</button>
     <script>
-      const addButton = document.querySelector(".add-btn");
+      const buttonElement = document.querySelector('.js-btn');
 
-      function displayAdd() {
-        // Wait 2 seconds, then update the paragraph text
-        setTimeout(function () {
-          document.querySelector(".display-add").textContent = "Added!";
-        }, 2000);
-      }
+      const eventListener = () => {
+        console.log('Clicked');
+      };
+      buttonElement.addEventListener('click', eventListener);
+
+      buttonElement.removeEventListener('click', eventListener)
+
+      buttonElement.addEventListener('click', () => {
+        console.log('Clicked2');
+      });
+      // const addButton = document.querySelector(".add-btn");
+
+      // function displayAdd() {
+      //   // Wait 2 seconds, then update the paragraph text
+      //   setTimeout(function () {
+      //     document.querySelector(".display-add").textContent= "Added!";
+      //   }, 2000);
+      // }
 
       // function greeting() {
       //     console.log('hello!');
@@ -66,7 +80,7 @@
 
       //   console.log('end of script');
 
-      // ['make dinner', 'wash dishes', 'do laundry'].forEach(function(value, index) {
+      // ['make dinner', 'wash dishes', 'do laundry'].forEach((value, index) => {
       //     if (value === 'wash dishes') {
       //         return;
       //     }
@@ -74,6 +88,28 @@
       //     console.log(index);
       //     console.log(value);
       // })
+
+      // const regularFunction = function (param, param2) {
+      //   console.log('Hello Regular!')
+      //   return 5;
+      // }
+      // regularFunction();
+      
+      // const arrowFunction = () => {
+      //   console.log('Hello Arrows!');
+      //   return 5;
+      // };
+      // arrowFunction();
+
+
+      // const object2 = {
+      //   method: () => {
+
+      //   },
+      //   method() {
+
+      //   }
+      // }
     </script>
   </body>
 </html>
