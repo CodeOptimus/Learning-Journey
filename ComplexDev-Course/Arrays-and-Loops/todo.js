@@ -12,21 +12,28 @@ function renderTodoList() {
     const html = `
      <div>${todoObject.name}</div>
       <div>${todoObject.date}</div>
-      <button onclick="
-      todoList.splice(${index}, 1); 
-      renderTodoList();"
-      class="delete-btn">Delete</button>
+      <button
+      class="delete-btn js-delete-btn">Delete</button>
      `;
 
     todoListHTML += html;
   });
 
   document.querySelector(".container").innerHTML = todoListHTML;
+
+  document.querySelectorAll(".js-delete-btn").forEach((deleteBtn, index) => {
+    deleteBtn.addEventListener("click", () => {
+      todoList.splice(index, 1);
+      renderTodoList();
+    });
+  });
 }
 
-document.querySelector('.add-btn').addEventListener('click', () => {
+document.querySelector(".add-btn").addEventListener("click", () => {});
 
-})
+document.querySelector(".js-add-btn").addEventListener("click", () => {
+  addTodo();
+});
 
 function addTodo() {
   const inputElement = document.querySelector(".todo-input");
@@ -46,11 +53,8 @@ function addTodo() {
   inputElement.value = "";
   dateInputElement.value = "";
 
-  // Wait 2 seconds before adding the todo to the list and rendering
-  setTimeout(() => {
-    todoList.push({ name: todoName, date: dueDate });
-    renderTodoList();
-  }, 2000);
+  todoList.push({ name: todoName, date: dueDate });
+  renderTodoList();
 }
 
 // // This code manages a simple todo list application.
